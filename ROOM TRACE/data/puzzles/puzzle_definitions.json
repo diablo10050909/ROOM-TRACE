@@ -1,0 +1,54 @@
+{
+  "puzzle-01": {
+    "id": "puzzle-01",
+    "type": "observation",
+    "difficulty": "easy",
+    "question": "낡은 책상 상판에 희미하게 새겨진 글자는 무엇인가? 이 글자는 이 공간의 본질을 나타낸다.",
+    "hint": "어딘가에 기록된 단어 중 하나일 것이다. 4글자",
+    "correctAnswer": "TRACE",
+    "clueEffect": "인벤토리에 'TRACE' 단서 추가, 특정 오브젝트 활성화",
+    "solvedMessage": "책상의 흔적을 발견했다. 이제야 공간의 의미를 이해할 것 같다."
+  },
+  "puzzle-02": {
+    "id": "puzzle-02",
+    "type": "logic-riddle",
+    "difficulty": "medium",
+    "question": "벽에 걸린 추상화를 자세히 보니, 숨겨진 의미가 담긴 단어가 보인다. 이 방을 의미하는 4글자 단어는?",
+    "hint": "그림의 형태와 색상 배치에서 패턴을 찾아라. '방'을 뜻하는 영단어.",
+    "correctAnswer": "ROOM",
+    "clueEffect": "인벤토리에 'ROOM' 단서 추가",
+    "solvedMessage": "그림의 퍼즐을 풀었다. 이 공간의 이름이 명확해진다."
+  },
+  "puzzle-03": {
+    "id": "puzzle-03",
+    "type": "combination",
+    "difficulty": "hard",
+    "question": "바닥에 흩뿌려진 조각들을 맞춰보니 의미 있는 한 문장이 완성된다. 문장을 완성하는 마지막 단어는 무엇인가?",
+    "hint": "모든 조각을 모아라. 그리고 '방'과 '흔적'이 의미하는 것을 생각하라. 6글자.",
+    "correctAnswer": "SYSTEM",
+    "clueEffect": "인벤토리에 'SYSTEM' 단서 추가. 최종 문 잠금 해제에 결정적.",
+    "solvedMessage": "파편 속에서 시스템의 이름을 발견했다. 이제 출구로 향할 수 있다."
+  },
+  "puzzle-04": {
+    "id": "puzzle-04",
+    "type": "numerical-sequence",
+    "difficulty": "medium",
+    "question": "화면에 나타난 숫자 시퀀스의 다음 숫자는? 1, 1, 2, 3, 5, 8, ?",
+    "hint": "자연의 법칙을 따르는 수열이다.",
+    "correctAnswer": "13",
+    "clueEffect": "다음 퍼즐에 대한 단서 제공",
+    "solvedMessage": "수열의 규칙을 파악했다. 논리 회로가 작동한다."
+  },
+  "puzzle-05": {
+    "id": "puzzle-05",
+    "type": "cipher",
+    "difficulty": "hard",
+    "question": "낡은 스크린에 깨진 글씨로 'Usvvdu rpsh xuhw frgh'라고 쓰여있다. 해독된 단어는 무엇인가?",
+    "hint": "치환 암호. 알파벳을 얼마나 이동했는지 찾아봐라. 힌트는 다른 오브젝트에 있다.",
+    "correctAnswer": "SHADOW",
+    "clueEffect": "숨겨진 버튼 활성화",
+    "solvedMessage": "난해한 암호를 풀어냈다. 숨겨진 기능이 드러난다."
+  }
+  // TODO: 김희율! 여기에 너의 지옥 같은 퍼즐 8개를 추가로 때려 박아 넣어라!
+  // 각각 고유한 ID, type, difficulty, question, hint, correctAnswer, clueEffect, solvedMessage를 가져야 한다!
+}
