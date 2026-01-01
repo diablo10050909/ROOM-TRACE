@@ -1,0 +1,138 @@
+/* css/ui.css - 플레이어의 조작을 받아들이는 기계 인터페이스 */
+
+/* #game-ui: 인풋과 버튼을 품고 있는 아래쪽 컨트롤 패널! */
+#game-ui {
+    background-color: #222; /* 살짝 밝은 어두움으로 분리감을 준다! */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center; /* 가운데 정렬! */
+    align-items: center;
+    gap: 12px; /* 요소들 간의 간격! */
+    border-top: 1px solid #00aaaa; /* 상위 섹션과 구분되는 시스템 선 */
+    flex-wrap: wrap; /* 작은 화면에서 요소들이 줄바꿈되도록! */
+}
+
+/* 모든 텍스트 입력 필드 */
+input[type="text"] {
+    padding: 12px;
+    width: 250px; /* 기본 너비 */
+    background-color: #333; /* 어두운 입력창 배경 */
+    border: 1px solid #00ffff; /* 시스템 시안색 테두리 */
+    color: #e0e0e0; /* 입력 텍스트 색상 */
+    font-size: 1em;
+    text-align: center;
+    border-radius: 4px;
+    outline: none; /* 포커스 시 기본 아웃라인 제거 */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #888; /* 플레이스홀더 텍스트 색상 */
+}
+
+input[type="text"]:focus {
+    border-color: #00ff00; /* 포커스 시 초록색으로 변경! */
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.5); /* 초록색 빛 발산! */
+}
+
+/* 모든 버튼 요소들 */
+button {
+    padding: 12px 20px;
+    background-color: #00aaff; /* 기본 시스템 블루 */
+    color: #1a1a1a;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-transform: uppercase; /* 버튼 텍스트는 대문자로! 시스템 메시지처럼! */
+    letter-spacing: 0.5px;
+    outline: none; /* 포커스 시 기본 아웃라인 제거 */
+}
+
+button:hover {
+    background-color: #00ccee; /* 마우스 오버 시 살짝 밝아짐! */
+    transform: translateY(-2px) scale(1.02); /* 살짝 떠오르며 커지는 효과! */
+    box-shadow: 0 0 12px rgba(0, 170, 255, 0.5); /* 파란색 그림자! */
+}
+
+button:active {
+    transform: translateY(0); /* 클릭 시 원위치! */
+    background-color: #0077bb; /* 클릭 시 더 어둡게! */
+}
+
+/* 특정 기능 버튼 (저장, 불러오기 등) */
+#save-button, #load-button {
+    background-color: #555; /* 회색 톤으로 일반 버튼과 차별! */
+    color: #eee;
+    border: 1px solid #777;
+    text-transform: capitalize; /* 텍스트는 일반 대소문자 */
+}
+
+#save-button:hover, #load-button:hover {
+    background-color: #666; /* 마우스 오버 시 살짝 밝아짐 */
+    box-shadow: 0 0 10px rgba(150, 150, 150, 0.4);
+}
+
+
+/* #message-display: 시스템 경고 및 정보 메시지! 플레이어에게 강요하듯이! */
+#message-display {
+    position: absolute;
+    /* #game-container 내에서 배치되도록 상대적 위치 */
+    bottom: 100px; /* UI 위에 오도록 충분히 높이 */
+    left: 50%;
+    transform: translateX(-50%); /* 정확히 중앙 정렬! */
+    background-color: rgba(0, 0, 0, 0.9); /* 거의 투명하지 않은 검은색 배경! */
+    color: #00ffff; /* 시스템 메시지는 시안색이 진리! */
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid #00aaaa;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* 네온 테두리 */
+    opacity: 0; /* 기본적으로는 안 보이게! */
+    visibility: hidden; /* 영역 자체도 숨긴다! */
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease; /* 나타날 때 부드럽게! */
+    white-space: nowrap; /* 메시지가 줄바꿈되지 않게! 한 줄로 때려 박아! */
+    z-index: 1000; /* 다른 UI 요소들 위에 뜨게! */
+    font-size: 0.9em;
+    text-align: center;
+    pointer-events: none; /* 메시지 창으로는 클릭이 안 되게! */
+}
+
+#message-display.show {
+    opacity: 1; /* 나타날 때 투명도 100%! */
+    visibility: visible; /* 영역도 보이게! */
+    transform: translateX(-50%) translateY(-10px); /* 살짝 위로 올라오면서 나타나는 효과! */
+}
+
+/* 메시지 경고용 스타일 (오류 시 빨간색!) */
+#message-display.error {
+    background-color: rgba(100, 0, 0, 0.9); /* 지옥의 빨강! */
+    color: #ffcccc; /* 옅은 붉은색 텍스트 */
+    border: 1px solid #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+
+/* 반응형 디자인 (UI 요소들도 작은 화면에서 잘 보이게 조절!) */
+@media (max-width: 768px) {
+    #game-ui {
+        flex-direction: column; /* 작은 화면에서는 세로로 정렬! */
+        padding: 10px;
+    }
+    input[type="text"] {
+        width: 80%; /* 폭 늘리기 */
+    }
+    button {
+        width: 80%; /* 폭 늘리기 */
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+    #message-display {
+        bottom: 80px; /* UI와 겹치지 않게 */
+        width: 90%;
+        max-width: none;
+        white-space: normal; /* 긴 메시지는 줄바꿈 허용 */
+        font-size: 0.85em;
+    }
+}
