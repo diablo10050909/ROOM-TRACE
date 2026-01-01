@@ -1,0 +1,21 @@
+{
+  "meta-message-01": {
+    "id": "meta-message-01",
+    "type": "log",
+    "trigger": "room-02-clear",
+    "content": "[LOG: SYS_CORE_ERROR - Recursion depth exceeded. Reverting to initial state. Trace fragments remain.]"
+  },
+  "broken-sentence-01": {
+    "id": "broken-sentence-01",
+    "type": "fragment",
+    "trigger": "puzzle-05-solved",
+    "content": "나는... 기억... 잃어가는... 이곳은..."
+  },
+  "narrative-hint-01": {
+    "id": "narrative-hint-01",
+    "type": "hint",
+    "trigger": "found_all_room_01_clues",
+    "content": "시스템은 흔적을 통해 존재한다. 흔적이 없다면... 아무것도 존재하지 않는다."
+  }
+  // TODO: 여기에 네 게임의 철학이자 스토리가 될 메시지들을 채워 넣어라!
+}
