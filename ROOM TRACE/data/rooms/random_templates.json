@@ -1,0 +1,18 @@
+{
+  "template-type-01": {
+    "name": "논리 미궁",
+    "layout": "default-layout",
+    "puzzlePool": ["puzzle-01", "puzzle-02", "puzzle-03", "puzzle-04"],
+    "objectCount": { "min": 3, "max": 5 },
+    "difficultyModifier": 1.0
+  },
+  "template-type-02": {
+    "name": "시계 장치",
+    "layout": "clock-room-layout",
+    "puzzlePool": ["puzzle-06", "puzzle-07", "puzzle-08"],
+    "objectCount": { "min": 2, "max": 4 },
+    "difficultyModifier": 1.2
+  }
+  // TODO: 여기에 무한대 방 생성의 기반이 될 다양한 템플릿 규칙들을 정의할 수 있다!
+  // (현재는 예시이며, 실제 RoomGenerator 구현 시 규칙 정의는 달라질 수 있음)
+}
