@@ -1,0 +1,71 @@
+{
+  "room-01": {
+    "id": "room-01",
+    "title": "시작의 공간 (The Genesis Room)",
+    "description": "차가운 금속 벽과 희미한 조명만이 존재하는 방. 알 수 없는 메시지가 공허하게 울린다. 이곳이 어디인가?",
+    "backgroundImage": "assets/images/backgrounds/room_01_bg.png",
+    "objects": [
+      {
+        "id": "desk-object",
+        "name": "낡은 시스템 콘솔",
+        "description": "오래된 시스템 콘솔이다. 상판에 희미하게 글자가 새겨져 있다.",
+        "puzzleId": "puzzle-01",
+        "position": { "left": "20%", "top": "60%", "width": "200px", "height": "100px" }
+      },
+      {
+        "id": "painting-object",
+        "name": "벽의 추상화",
+        "description": "금속 패널에 그려진 의미를 알 수 없는 추상화. 패턴 속에 무언가 숨겨져 있다.",
+        "puzzleId": "puzzle-02",
+        "position": { "right": "15%", "top": "30%", "width": "180px", "height": "220px" }
+      },
+      {
+        "id": "floor-panel",
+        "name": "바닥 패널",
+        "description": "바닥의 패널 조각들이 어지럽게 흩어져 있다. 연결하면 무언가 보일 것 같다.",
+        "puzzleId": "puzzle-03",
+        "position": { "left": "40%", "bottom": "10%", "width": "300px", "height": "80px" }
+      }
+    ],
+    "door": {
+      "id": "room-01-exit",
+      "position": { "left": "45%", "top": "20%" },
+      "answer": "puzzle-03",
+      "isLocked": true
+    },
+    "nextRoomSequence": "room-02"
+  },
+  "room-02": {
+    "id": "room-02",
+    "title": "회귀의 미궁 (Labyrinth of Recursion)",
+    "description": "방금 전의 방과 놀랍도록 닮았다. 하지만 모든 것이 조금씩 비틀려 있다. 이 미궁은 끝이 있는가?",
+    "backgroundImage": "assets/images/backgrounds/room_02_bg.png",
+    "objects": [
+      {
+        "id": "terminal-object",
+        "name": "오류 터미널",
+        "description": "숫자 시퀀스가 빠르게 지나가는 오래된 터미널. 뭔가 의미가 있을 것 같다.",
+        "puzzleId": "puzzle-04",
+        "position": { "left": "10%", "top": "25%", "width": "250px", "height": "150px" }
+      },
+      {
+        "id": "screen-object",
+        "name": "깨진 화면",
+        "description": "전원이 나간 듯한 화면. 잔상 속에 희미한 글자들이 보인다.",
+        "puzzleId": "puzzle-05",
+        "position": { "right": "20%", "bottom": "25%", "width": "200px", "height": "120px" }
+      }
+      // ... Room-02의 다른 오브젝트들 ...
+    ],
+    "door": {
+      "id": "room-02-exit",
+      "position": { "right": "5%", "top": "40%" },
+      "answer": "SHADOW",
+      "isLocked": true
+    },
+    "nextRoomSequence": "room-03"
+  }
+  // TODO: 김희율! 여기에 너의 나머지 기본 방 11개와 그 안의 오브젝트들을 채워 넣어라!
+  // 각각의 방은 고유한 ID를 가지고, 각 오브젝트는 puzzle_definitions.json의 퍼즐 ID와 연결되어야 한다.
+  // door.answer에는 해당 방의 최종 출구 비밀번호 (또는 퍼즐ID)를 넣어라!
+}
