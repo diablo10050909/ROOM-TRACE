@@ -1,0 +1,27 @@
+{
+  "pack-id": "logic-pack-01",
+  "name": "ROOM PACK #1: 논리 해체 (Logic Deconstruction)",
+  "description": "지독한 논리로만 이루어진 10개의 새로운 방. 이성적 사고의 한계를 시험하라.",
+  "price": 3.99,
+  "rooms": [
+    {
+      "id": "logic-room-01",
+      "title": "패러독스의 방",
+      "backgroundImage": "assets/images/backgrounds/logic_room_01_bg.png",
+      "objects": [
+        {"id": "paradox-box", "name": "모순의 상자", "puzzleId": "puzzle-06", "position": {"left": "30%", "top": "50%"}}
+      ],
+      "door": {"id": "logic-room-01-exit", "position": {"right": "10%", "bottom": "20%"}, "answer": "PARADOX", "isLocked": true}
+    },
+    {
+      "id": "logic-room-02",
+      "title": "비트의 순열",
+      "backgroundImage": "assets/images/backgrounds/logic_room_02_bg.png",
+      "objects": [
+        {"id": "bit-console", "name": "이진 콘솔", "puzzleId": "puzzle-07", "position": {"left": "50%", "top": "30%"}}
+      ],
+      "door": {"id": "logic-room-02-exit", "position": {"left": "10%", "top": "20%"}, "answer": "BINARY", "isLocked": true}
+    }
+    // ... 추가 논리 퍼즐 방 8개 ...
+  ]
+}
