@@ -1,0 +1,27 @@
+{
+  "pack-id": "time-pack-01",
+  "name": "ROOM PACK #2: 시간 역설 (Temporal Anomaly)",
+  "description": "시간의 흐름이 뒤틀린 8개의 방. 과거와 미래, 그리고 현재가 얽혀 혼란을 가중시킨다.",
+  "price": 4.99,
+  "rooms": [
+    {
+      "id": "time-room-01",
+      "title": "정체된 시간의 방",
+      "backgroundImage": "assets/images/backgrounds/time_room_01_bg.png",
+      "objects": [
+        {"id": "stopped-clock", "name": "멈춘 시계", "puzzleId": "puzzle-08", "position": {"left": "25%", "top": "35%"}}
+      ],
+      "door": {"id": "time-room-01-exit", "position": {"left": "40%", "bottom": "15%"}, "answer": "PAST", "isLocked": true}
+    },
+    {
+      "id": "time-room-02",
+      "title": "미래의 메아리",
+      "backgroundImage": "assets/images/backgrounds/time_room_02_bg.png",
+      "objects": [
+        {"id": "future-tablet", "name": "알 수 없는 기기", "puzzleId": "puzzle-09", "position": {"right": "30%", "top": "60%"}}
+      ],
+      "door": {"id": "time-room-02-exit", "position": {"right": "15%", "top": "20%"}, "answer": "ECHO", "isLocked": true}
+    }
+    // ... 추가 시간 퍼즐 방 6개 ...
+  ]
+}
